@@ -53,7 +53,10 @@ Review a student assignment PR from the PR number or URL. Compare the actual PR 
    - Default to reading the PR through git metadata, diffs, and direct file inspection first.
    - Do not create a `tmp_pr[#]` working folder by default.
    - Create a temporary PR folder only when isolated install, lint, or build verification is actually needed.
-   - When useful, run non-mutating verification such as install, lint, and build.
+   - Do not install dependencies or run build by default.
+   - Use lint as the first verification step only when there is a concrete reason to validate a likely static issue.
+   - Use build only when there is stronger suspicion of a real compile or type problem, or when the user explicitly wants stricter verification.
+   - Install dependencies only when the chosen verification step actually requires them.
    - Focus on:
      - assignment correctness
      - component structure
@@ -88,6 +91,9 @@ Review a student assignment PR from the PR number or URL. Compare the actual PR 
 - Prefer assignment-scope-aware comments over generic best practices.
 - Prefer concrete, teachable comments over speculative architecture advice.
 - Prefer lightweight inspection over cloning a temporary review folder unless verification truly requires it.
+- Prefer code review from diffs and file inspection as the default path.
+- Prefer lint before build when validation is justified.
+- Prefer skipping install/build entirely when the review can already be completed confidently from the code.
 - Critical issues override week scope.
 - Treat these as critical by default when they are present:
   - broken or misleading assignment implementation
