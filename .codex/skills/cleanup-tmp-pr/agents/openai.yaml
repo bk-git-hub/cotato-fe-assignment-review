@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cleanup Tmp PR"
+  short_description: "Remove temporary review folders such as tmp_pr20"
+  default_prompt: "Use $cleanup-tmp-pr to remove one or more temporary PR review folders such as tmp_pr20 from the current workspace."
