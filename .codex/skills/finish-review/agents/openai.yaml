@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finish Review"
+  short_description: "Sync posted review comments into a student log"
+  default_prompt: "Use this skill after a student PR review is finished to fetch the actual GitHub review comments and update the matching student review log markdown file for that week."
