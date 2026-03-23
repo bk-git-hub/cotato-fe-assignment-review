@@ -50,6 +50,9 @@ Review a student assignment PR from the PR number or URL. Compare the actual PR 
 
 6. Inspect the implementation.
    - Read the changed source files, not just metadata.
+   - Default to reading the PR through git metadata, diffs, and direct file inspection first.
+   - Do not create a `tmp_pr[#]` working folder by default.
+   - Create a temporary PR folder only when isolated install, lint, or build verification is actually needed.
    - When useful, run non-mutating verification such as install, lint, and build.
    - Focus on:
      - assignment correctness
@@ -84,6 +87,7 @@ Review a student assignment PR from the PR number or URL. Compare the actual PR 
 
 - Prefer assignment-scope-aware comments over generic best practices.
 - Prefer concrete, teachable comments over speculative architecture advice.
+- Prefer lightweight inspection over cloning a temporary review folder unless verification truly requires it.
 - Critical issues override week scope.
 - Treat these as critical by default when they are present:
   - broken or misleading assignment implementation
