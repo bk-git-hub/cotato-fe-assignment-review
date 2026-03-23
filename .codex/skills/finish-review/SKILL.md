@@ -19,6 +19,7 @@ Fetch the actual review comments the user posted on a student PR and sync them i
 2. Fetch the source of truth.
    - Fetch the PR metadata.
    - Fetch the actual GitHub review comments left by the user.
+   - Also fetch the submitted PR reviews so the final top-level review body or summary conversation is not missed.
    - Resolve:
      - PR number
      - base branch
@@ -29,7 +30,7 @@ Fetch the actual review comments the user posted on a student PR and sync them i
 3. Update the student review log.
    - Read or create `reviews/<handle>.md`.
    - Preserve the established project log format.
-   - Record only comments actually posted by the user.
+   - Record only comments and review summaries actually posted by the user.
    - Summarize follow-up notes that should inform future weekly reviews.
 
 ## Boundaries
@@ -39,6 +40,7 @@ Fetch the actual review comments the user posted on a student PR and sync them i
 - Do not assume the student fixed the comments before merge.
 - Do not infer “accepted” or “resolved” unless the user explicitly tells you later.
 - The purpose is long-term student feedback tracking.
+- Treat inline review comments and the final submitted review body as separate but equally valid source-of-truth artifacts when they exist.
 
 ## Output Rules
 
