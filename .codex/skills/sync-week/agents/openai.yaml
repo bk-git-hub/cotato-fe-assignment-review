@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Week"
+  short_description: "Sync one week objective from the curriculum"
+  default_prompt: "Use $sync-week to fetch one curriculum week from Notion and update the matching weekly objective markdown file."
