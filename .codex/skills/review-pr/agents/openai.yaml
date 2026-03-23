@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review PR"
+  short_description: "Review a student assignment pull request from a PR number or URL"
+  default_prompt: "Use this skill to review a student assignment PR from a PR URL or number, compare against the student base branch, read the student review log, and produce Korean inline review comments with explanations."
