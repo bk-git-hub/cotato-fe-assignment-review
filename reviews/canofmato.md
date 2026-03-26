@@ -36,5 +36,7 @@
   - `src/component/TodoList.tsx`: pointed out that the assignment expects completed state to be passed in through props so items render differently from the start, but `checked` was not actually passed down to `TodoCard`
   - `src/App.tsx`: suggested handling the empty state by branching on the list length instead of always rendering `TodoHeader` plus `TodoEmpty` below the list
   - `src/component/TodoCard.tsx`: noted that although local toggle state was beyond the week's reading scope, `setIsChecked(prev => !prev)` would be a clearer and more React-idiomatic pattern than `setIsChecked(!isChecked)`
+  - `src/component/TodoCard.tsx`: suggested considering `input type="checkbox"` semantics for the completion toggle instead of a clickable `li`
 - Follow-up:
   - watch whether this student continues to keep code readable while tightening how props and conditional rendering are actually connected to the initial data
+  - if the student keeps adding interaction early, it is reasonable to start giving light semantic feedback for controls as well
