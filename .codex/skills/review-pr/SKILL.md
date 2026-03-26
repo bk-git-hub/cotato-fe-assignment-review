@@ -1,18 +1,21 @@
 ---
 name: review-pr
-description: Review a student assignment pull request from a PR number or GitHub PR URL. Use when the user wants review suggestions, inline Korean review comments, compliments, or review calibration for a weekly frontend assignment PR. Resolve the student handle from the PR, compare against the student's base branch rather than main, read the student's review log in the reviews directory when present, check the matching weekly objective file when available, and return the full review inventory grouped by priority.
+description: Review a student assignment pull request from a PR number, a GitHub PR URL, or no explicit PR identifier when the oldest currently open PR should be reviewed by default. Use when the user wants review suggestions, inline Korean review comments, compliments, or review calibration for a weekly frontend assignment PR. Resolve the student handle from the PR, compare against the student's base branch rather than main, read the student's review log in the reviews directory when present, check the matching weekly objective file when available, and return the full review inventory grouped by priority.
 ---
 
 # Review PR
 
 ## Overview
 
-Review a student assignment PR from the PR number or URL. Compare the actual PR against the student's personal base branch, use prior feedback history to calibrate the review, and generate Korean review comments with short reasoning.
+Review a student assignment PR from the PR number or URL, or default to the oldest open PR when the user omits the identifier. Compare the actual PR against the student's personal base branch, use prior feedback history to calibrate the review, and generate Korean review comments with short reasoning.
 
 ## Workflow
 
 1. Resolve the PR.
-   - Accept either `$review-pr #15` or a full GitHub PR URL.
+   - Accept either `$review-pr #15`, a full GitHub PR URL, or just `$review-pr`.
+   - If the user omits the PR identifier, resolve the oldest currently open PR in the default source repository.
+   - Treat "oldest currently open PR" as the open PR with the lowest PR number, which is also the earliest-created open PR.
+   - If repository context is ever genuinely ambiguous, ask rather than guessing.
    - Fetch PR metadata and determine:
      - PR number
      - base branch
