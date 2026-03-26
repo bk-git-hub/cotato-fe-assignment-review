@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Missing PRs"
+  short_description: "Find students who have not opened a weekly PR"
+  default_prompt: "Use $check-missing-prs to find which students have not submitted their weekly assignment PR yet."
