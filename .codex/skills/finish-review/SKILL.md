@@ -33,6 +33,17 @@ Fetch the actual review comments the user posted on a student PR and sync them i
    - Record only comments and review summaries actually posted by the user.
    - Summarize follow-up notes that should inform future weekly reviews.
 
+4. Commit the log update automatically.
+   - After successfully updating `reviews/<handle>.md`, stage only that file.
+   - Create a git commit immediately after the file update when the file content actually changed.
+   - Use this commit message format exactly:
+     - `docs: update <github-handle> review log week <n>`
+   - Replace:
+     - `<github-handle>` with the student's GitHub handle
+     - `<n>` with the inferred week number as a plain integer such as `1`, `2`, or `3`
+   - Do not include unrelated modified files in the commit.
+   - If there is no actual change to `reviews/<handle>.md`, do not create an empty commit.
+
 ## Boundaries
 
 - Do not manage PR lifecycle decisions.
@@ -41,11 +52,13 @@ Fetch the actual review comments the user posted on a student PR and sync them i
 - Do not infer “accepted” or “resolved” unless the user explicitly tells you later.
 - The purpose is long-term student feedback tracking.
 - Treat inline review comments and the final submitted review body as separate but equally valid source-of-truth artifacts when they exist.
+- Do not commit unrelated worktree changes together with the review log update.
 
 ## Output Rules
 
 - Confirm which PR was synced.
 - State which file was created or updated.
+- State whether the log update was committed.
 - Summarize what feedback entries were written.
 - Keep the user-facing answer short.
 
