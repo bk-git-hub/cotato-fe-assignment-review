@@ -27,3 +27,23 @@
   - `src/components/TodoList.tsx`: suggested replacing the `div`-based list wrapper with `ul` / `li` for more semantic list markup
 - Follow-up:
   - watch whether future PRs continue using semantic structure as the UI becomes more complex
+
+## Week 2
+- PR: [#28](https://github.com/IT-Cotato/13th-Frontend-Assignment/pull/28)
+- Branch: `yuvvinn-week2` -> `yuvvinn`
+- PR title: `이유빈 week2`
+- Status: open as of 2026-03-27
+- Assignment focus: week 2 props, list rendering, completed-state expression, and empty state
+- Review summary:
+  - praised that last week's semantic list feedback was reflected well
+  - highlighted the `input` checkbox implementation for the completion toggle as especially impressive
+  - positioned the remaining notes as light polish rather than major assignment failures
+- Comments left:
+  - `src/App.tsx`: suggested showing `EmptyList` only when the list is actually empty
+  - `src/css/TodoCard.css`: noted that `border-radius: 13421800px` could be replaced with a clearer value like `50%` or `9999px`
+  - `src/components/TodoList.tsx`: suggested moving `TodoItem` into a shared type file such as `src/types/todo.types.ts`
+  - `src/App.tsx`: suggested moving todo seed data into a separate file such as `todo.data.ts`
+- Follow-up:
+  - this student is handling feedback well and appears ready for slightly higher-bar code quality comments
+  - okay to continue encouraging shared type placement and cleaner data organization without over-pushing advanced architecture
+  - semantic instincts are strong for this stage, especially around list and checkbox structure
