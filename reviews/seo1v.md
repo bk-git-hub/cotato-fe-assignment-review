@@ -26,3 +26,22 @@
   - `src/components/TodoList.tsx`: suggested using `ul` / `li` instead of `div` for more semantic list markup
 - Follow-up:
   - watch whether future PRs keep file naming and import casing consistent from the start
+
+## Week 2
+- PR: [#30](https://github.com/IT-Cotato/13th-Frontend-Assignment/pull/30)
+- Branch: `seo1v-week2` -> `seo1v`
+- PR title: `엄민서 week2`
+- Status: merged on 2026-03-26
+- Assignment focus: week 2 props, list rendering, completed-state expression, and empty state
+- Review summary:
+  - said the week 2 essentials were implemented well overall, including props, `map`, stable `key`, and the empty fallback
+  - noted that there were only a few light polish comments to leave
+  - praised the overall commit flow while suggesting slightly more specific wording than `feat: 빈 상태`
+- Comments left:
+  - `src/App.tsx`: suggested using `setTodos(prev => prev.map(...))` for safer previous-state-based updates
+  - `src/components/TodoList.tsx`: suggested moving the toggle interaction from the clickable `li` to a more semantic control such as `input type="checkbox"`
+  - `src/components/TodoCard.tsx`: pointed out that the `'done'` class on the inner `span` appears unused because the actual CSS is defined on `.card.done`
+- Follow-up:
+  - this student reflects feedback quickly, including import path casing and semantic list structure
+  - the next review bar can stay a little higher on code quality details such as state update patterns and interaction semantics
+  - commit structure is already good; future feedback can focus on message specificity rather than splitting work
