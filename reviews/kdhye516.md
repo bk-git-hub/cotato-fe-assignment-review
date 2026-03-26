@@ -26,3 +26,21 @@
 - Follow-up:
   - watch whether future submissions keep the same clear component separation while improving semantic structure
   - look for more task-oriented commit grouping in later PRs
+
+## Week 2
+- PR: [#27](https://github.com/IT-Cotato/13th-Frontend-Assignment/pull/27)
+- Branch: `kdhye516-week2` -> `kdhye516`
+- PR title: `김다혜 week2`
+- Status: open as of 2026-03-26
+- Assignment focus: props-based todo state expression, list rendering, and empty state
+- Review summary:
+  - praised that last week's feedback was reflected well, including semantic structure updates and props-based completed-state rendering
+  - noted visible effort to split commits by work unit, while encouraging more specific commit messages with prefixes next time
+- Comments left:
+  - `src/App.tsx`: suggested showing the empty state through conditional rendering when the list is actually empty
+  - `src/App.tsx`: suggested moving the `todos` constant into a separate file such as `todo.data.ts` to improve `App.tsx` readability
+  - `src/TodoList.tsx`: suggested extracting the `Todo` interface into a shared type file such as `src/types/todo.types.ts`
+- Follow-up:
+  - this student appears ready for light code-quality feedback beyond basic assignment correctness
+  - keep encouraging concrete file organization and reusable type placement without over-pushing later-week concepts
+  - commit grouping improved; next watch point is message specificity rather than whether commits are split at all
