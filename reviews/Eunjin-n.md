@@ -31,3 +31,25 @@
   - `src/components/TodoHeader.tsx`: suggested using more semantic heading tags instead of only `div`s for the header content
 - Follow-up:
   - look for growth in reusable component design and clearer file-role separation in later PRs
+
+## Week 2
+- PR: [#29](https://github.com/IT-Cotato/13th-Frontend-Assignment/pull/29)
+- Branch: `Eunjin-n-week2` -> `Eunjin-n`
+- PR title: `박은진 week2`
+- Status: merged on 2026-03-26
+- Assignment focus: week 2 props, list rendering, completed-state expression, and empty state
+- Review summary:
+  - praised the move from hardcoded cards to an array plus `map`
+  - praised passing completion state through props and separating `TODO_ITEMS` into its own file
+  - praised the use of `feat:`-scoped commits
+  - answered the student's empty-array question by explaining `never[]` inference and recommending explicit `TodoItem[]` typing
+- Comments left:
+  - `src/App.css`: suggested replacing `border-radius: 13421800px` with a clearer value like `50%` or `9999px`
+  - `src/components/todoItems.ts`: praised splitting the constants into a separate file, but suggested moving it from `components` into `src/data` or `src/constants`
+  - `src/components/TodoCard.tsx`: suggested reducing duplicated JSX by keeping one shared `li` structure and only conditionally changing icon and class
+  - `src/components/TodoCard.tsx`: suggested moving the long inline checkmark SVG into a `.svg` asset or a separate `CheckIcon` component for readability
+  - `src/App.tsx`: suggested using semantic heading elements like `header` and `h1` in `TodoHeader`
+- Follow-up:
+  - this student is following feedback well and is ready for early code-quality comments beyond assignment correctness
+  - keep encouraging reusable component structure, file-role clarity, and semantic HTML from the start
+  - the student is attentive and asks good questions, so direct explanations about TypeScript inference and code organization are likely to land well
